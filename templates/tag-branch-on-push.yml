@@ -1,28 +1,18 @@
 spec:
   inputs:
     tag:
+      description: Tag to generate or re-create
+      type: string
       default: SNAPSHOT-VERSION
     branch:
+      description: Target branch of the tag
+      type: string
       default: $CI_DEFAULT_BRANCH
     token:
+      description: Token with push access on tags
+      type: string
       default: ""
 ---
-
-# spec:
-#   inputs:
-#     tag:
-#       description: Tag to generate or re-create
-#       type: string
-#       default: SNAPSHOT-VERSION
-#     branch:
-#       description: Target branch of the tag
-#       type: string
-#       default: $CI_DEFAULT_BRANCH
-#     token
-#       description: Token with push access on tags
-#       type: string
-#       default: ""
-# ---
 
 generate-default-branch-tag:
   image: registry.papierpain.fr/docker/alpine:latest
